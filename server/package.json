@@ -1,0 +1,24 @@
+{
+  "name": "backendforvdash",
+  "version": "1.0.0",
+  "description": "serverside for V-Dash",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorMercado/V-Dash.git"
+  },
+  "author": "Victor Mercado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VictorMercado/V-Dash/issues"
+  },
+  "homepage": "https://github.com/VictorMercado/V-Dash#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodejs": "^0.0.0"
+  }
+}
