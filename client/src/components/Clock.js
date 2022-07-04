@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Toggle from './Toggle';
+import Toggle from './header/Toggle';
 import PropTypes from 'prop-types';
 
 class Clock extends React.Component {

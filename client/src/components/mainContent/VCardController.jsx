@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Vcard from './VCard';
+import Vcard from '../VCard';
 
 const VCardController = () => {
     return(

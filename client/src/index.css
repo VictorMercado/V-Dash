@@ -1,27 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer components {
-  .bg-stripes-cyan {
-    background-color: #22d3ee1a;
-    background-image: linear-gradient(135deg, #06b6d490 10%, transparent 0, transparent 50%, #06b6d490 0, #06b6d490 60%, transparent 0, transparent);
-    background-size: 7.07px 7.07px;
-  }
-}
 :root {
   --aqua: #52ffbf;
   --lightpink: #ff57b3;
@@ -64,6 +40,34 @@ code {
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .bg-stripes-cyan-text {
+    background-color: #22d3ee1a;
+    background-image: linear-gradient(135deg, #06b6d490 10%, transparent 0, transparent 50%, #06b6d490 0, #06b6d490 60%, transparent 0, transparent);
+    background-size: 3.07px 3.07px;
+    color: var(--black);
+  }
+  .bg-stripes-cyan {
+    background-color: #22d3ee1a;
+    background-image: linear-gradient(135deg, #06b6d490 10%, transparent 0, transparent 50%, #06b6d490 0, #06b6d490 60%, transparent 0, transparent);
+    background-size: 10.07px 10.07px;
+  }
+  .blue-pink-border-square {
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, var(--blue), var(--lighterpink));
+    border-image-slice: 1;
+  }
+  .text-clip {
+    background-clip: text;
+      -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
 html,
 body,
 div,
@@ -151,7 +155,10 @@ video {
   vertical-align: baseline;
 }
 html {
-  background-color: rgb(17,23,43);
+  /* background-color: rgb(17,23,43); */
+  /* background: linear-gradient(#fa93cc, #3f87a6); */
+  /* background: repeating-linear-gradient(135deg, var(--aqua), transparent, transparent, transparent, transparent, var(--aqua) 5px); */
+  @apply bg-stripes-cyan;
 }
 div, li, p, h1, h2, h3, input {
   color: var(--offwhite);

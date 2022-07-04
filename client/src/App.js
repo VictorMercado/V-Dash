@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import VCard from './components/VCard';
-import Navbar from './components/Navbar';
+import VCard from './components/mainContent/VCard';
+import Navbar from './components/header/Navbar';
 import Clock from './components/Clock';
-import PokemonController from './components/PokemonController'
-import Vcard from './components/VCard';
+import PokemonController from './components/mainContent/PokemonController'
+import Vcard from './components/mainContent/VCard';
 
 function App({  }) {
   const links = ["Home","Settings", "About"];
@@ -20,9 +20,9 @@ function App({  }) {
         {/* <Clock title={"Clock Block"} /> */}
         {/* <PokemonController /> */}
         {
-        comp.map((item, index)=> {
-          return <div key={index}>{item} </div> 
-          })
+          comp.map((item, index) => {
+              return <div key={index}>{item} </div> 
+            })
         }
       </div>
       <div></div>
