@@ -15,7 +15,6 @@ function App({  }) {
         <header className="App-header">
           {/* <VCard partyTime={"" + (5 + 10)} party="dude no way"/> */}
           <Navbar navlinks={links}/>
-
         </header>
         {/* <Clock title={"Clock Block"} /> */}
         {/* <PokemonController /> */}

@@ -22,7 +22,7 @@ const Vcard = ( { party } ) => {
   arr.shift();
   //rounded-xl border-primary border-[.5px]
   return (
-    <div className='w-100 blue-pink-border-square p-4 m-4 shadow-lg shadow-black'>
+    <div className=' p-2 m-4 w-100 blue-pink-border-rounded shadow-lg shadow-black'>
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.464 58.271">
         <g strokeWidth="1.5" transform="translate(-1624 -187.923)">
           <path d="M50.464 43.992L25.732 58.271 1 43.992V15.434L25.732 1.155l24.732 14.279z" transform="translate(1623.5 187.345)" stroke="black" fill="transparent">
@@ -31,19 +31,22 @@ const Vcard = ( { party } ) => {
         <text className='border-4 border-teal-600 rounded-lg animate-pulse' fill="#ffffff" fontSize="5" fontFamily="Verdana" x="10" y="35">
         </text>
       </svg> */}
-      <h1 className="text-black border-b-2 m-4 mb-8 border-pink text-2xl">
+      <h1 className="m-4 mb-8 text-fontcolor text-2xl border-b-2 border-border">
         { focusst.name }
       </h1>
       
       <div className="">
         {
-        arr.map((item, index) => {
-          return <div className='grid m-3 grid-cols-2 justify-items-start' key={index}>
-                    <p className='text-black font-bold'>{arr[index][0].toUpperCase() + arr[index].slice(1)}:</p>
-                    <input className='border-2 w-40 text-center rounded border-black dark:text-white dark:bg-black text-black' type="text" defaultValue={"" + focusst[arr[index]]} />
-                  </div>
-        })
-      }
+          arr.map((item, index) => {
+            return <div className='grid my-3 grid-cols-2 justify-items-start' key={index}>
+                      <div className='w-40 text-left m-auto'>
+                        <p className='text-fontcolor font-bold '>{arr[index][0].toUpperCase() + arr[index].slice(1)}:</p>
+                      </div>
+                      
+                      <input className='border-[1px] w-40 text-center rounded bg-background text-fontcolor border-mainborder m-auto' type="text" defaultValue={"" + focusst[arr[index]]} />
+                    </div>
+          })
+        }
       </div>
     </div>
   );
