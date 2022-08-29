@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/VictorMercado/V-Dash#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "nodejs": "^0.0.0"
+    "nodejs": "^0.0.0",
+    "pg": "^8.7.3"
   }
 }
