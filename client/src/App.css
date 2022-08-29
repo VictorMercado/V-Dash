@@ -1,10 +1,6 @@
-.App {
-  text-align: center;
-}
+
 .App-header {
   height: 7rem;
-  /* display: flex; */
-  /* align-items: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }

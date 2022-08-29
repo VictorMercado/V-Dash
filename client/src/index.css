@@ -2,15 +2,17 @@
 @tailwind utilities;
 @tailwind components;
 :root {
+  --main            : #fff;
   --primary         : #50afe9;
   --secondary       : #7514d3;
   --third           : #f1db65;
-  --accent          : #ea8d9d;
-  --background      : #fff;
+  --accent          : #fa93cc;
+  --background      : var(--main);
   --mainborder      : #000;
-  --border          : #000;
-  --border2         : ;
-  --main            : #fff;
+  --border          : var(--primary);
+  --border2         : var(--accent);
+  --icon            : #000;
+  --iconhover       : #adadad;
   --fontcolor       : #000;
   --font2color      : #cc06f9;
   --aqua            : #52ffbf;
@@ -64,6 +66,7 @@
   --border2     : var(--accent);
   --icon        : var(--black);
   --fontcolor   : var(--black);
+  --loading     : #64748b;
 }
 [data-mode="dark"] {
   --main        : #111827;
@@ -76,7 +79,8 @@
   --border      : var(--primary);
   --border2     : var(--accent);
   --icon        : var(--primary);
-  --fontcolor   : #e8e8e8;
+  --fontcolor   : #c7c7c7;
+  --loading     : #334155; 
   /* 64748b */
 }
 [data-mode="synth"] {
@@ -84,6 +88,10 @@
 }
 
 @layer components {
+  .icon:hover {
+    background-color: var(--iconhover);
+    border-radius: 10px;
+  }
   .text-clip {
     background-clip: text;
     -webkit-background-clip: text;
@@ -111,9 +119,12 @@
   }
   .blue-pink-border-rounded {
     border: 3px solid transparent;
-    border-radius: 30px;
+    border-radius: 20px;
     background: linear-gradient(135deg, var(--background), var(--background)) padding-box,
                 linear-gradient(135deg, var(--border), var(--border2)) border-box;
+  }
+  .bg-gradient-button {
+    background-image: linear-gradient(135deg, var(--border), var(--border2));
   }
 }
 
@@ -201,15 +212,18 @@ video {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
 }
 html {
   background-color: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
   /* background: linear-gradient(135deg, var(--background), #3f87a6); */
   /* background: repeating-linear-gradient(135deg, var(--aqua), transparent, transparent, transparent, transparent, var(--aqua) 5px); */
   /* @apply bg-stripes-cyan; */
+  /* transition: background 500ms ease-in-out; */
 }
-
 #toast {
   background-color: var(--clearBlack);
   display: none;

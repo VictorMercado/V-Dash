@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   mode: 'jit',
   theme: {
     extend: {
@@ -17,6 +17,7 @@ module.exports = {
       "main"        : "var(--main)",
       "fontcolor"   : "var(--fontcolor)",
       "font2color"  : "var(--font2color)",
+      "loading"     : "var(--loading)",
       'transparent' : 'rgb(255, 255, 255, 0.1)',
       'clearBlack'  : 'rgb(0, 0, 0, 0.3)',
       'white'       : '#fff',
@@ -29,16 +30,21 @@ module.exports = {
       'danger'      : '#dc3545',
       },
       animation: {
+        cycle: 'cycle 3s infinite alternate',
         shrinkNav: 'shrinkNav 300ms ease-in forwards',
-        growNav: 'growNav 300ms ease-in forwards'
+        growNav: 'growNav 300ms ease-in forwards',
       },
       keyframes: {
+        cycle: {
+          '0%'    : {'background-position' : 'left' },
+          '100%'  : {'background-position' : 'right'},
+        },
         shrinkNav: {
           '0%'    : { height: '3rem', opacity: '1' },
           '100%'  : { height: '0', opacity: '0' },
         },
         growNav: {
-          '0%'    : { opacity: '0', height: '0' },
+          '0%'    : { height: '0',  opacity: '0' },
           '100%'  : { height: '3rem', opacity: '1' },
         },
       },
